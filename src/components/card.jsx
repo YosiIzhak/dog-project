@@ -1,13 +1,15 @@
 import React from 'react'
 import './style.css'
 
-export default function card(props) {
+ const Card=(props) => {
     return (
-        <div className='card'>
+        <div className='card' onClick={props.onClick} >
             
             <h1>{props.firstname} {props.lastname}</h1>
             <img src={props.picture} alt=""/>
-
+           
         </div>
     )
 }
+
+export default Card
