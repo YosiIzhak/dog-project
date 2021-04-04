@@ -1,14 +1,65 @@
 .card{
    display: inline-block;
-    border: 2px solid red;
+    border: 2px solid;
     width: 30vw;
     margin: 15px;
+    z-index: 10;
 }
 .cards{
-  height: 90vh;
+ position: relative;;
   width: 90vw;
     grid-template-columns:  1fr 1fr ;
     grid-template-rows: 40% 40% ;
     column-gap: 3vw;
     row-gap: 5vh;
+  }
+  .my-modal {
+    position: fixed;
+    width: 25vw;
+    top:15vh;
+    left: 38vw;
+    background-color: white;
+    padding: 16px;
+    border-radius: 4px;
+  }
+  
+  .modal-header {
+    font-weight: bold;
+    background-color: white;
+  }
+  
+  .modal-body {
+    padding: 8px 0;
+  }
+  
+  .modal-footer button {
+    background: none;
+    border: 1px solid;
+    border-radius: 4px;
+    padding: 8px 16px;
+  }
+  
+  .modal-footer button:first-child {
+    border-color: red;
+    margin-right: 8px;
+  }
+  
+  .modal-footer button:last-child {
+    border-color: green;
+  }
+  .form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .formItem{
+    margin: 10px;
+    width: 15vw;
+  }
+  .exitLink{
+    background-color: aquamarine;
+    top:0;
+    left:0;
+    position: absolute;
   }
