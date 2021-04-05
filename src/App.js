@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import Form from './components/form'
+import Login from './components/login';
 import People from './components/index';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 function App() {
@@ -12,7 +12,7 @@ function App() {
             <Home />
           </Route>
           <Route path="/form">
-            <Form />
+            <Login />
           </Route>
           <Route path="/people">
             <People />

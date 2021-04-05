@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Card from './card'
 import Modal from './modal'
-
 import './style.css'
 
 const People = () => {
@@ -46,8 +45,7 @@ const People = () => {
                 <option value='male'>male</option>
                 <option value='female'>female</option>
             </select>
-            <label>min:</label>
-            <input type="number" id="hour" min="18" max="70" />
+           
             <div className="cards" style={{ backgroundColor: (gender === 'male' ? 'rgb(30, 30, 205)' : 'rgb(205, 30, 30)') }}>
                 {users.length > 0 ? res : ''}
                 {isModalShown && selectedUser ? <Modal selectedUser={selectedUser} onClose={toggleModal} /> : null}
