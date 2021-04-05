@@ -9,6 +9,14 @@ const People = () => {
     const [gender, setGender] = useState('male');
     const [selectedUser, setSelectedUser] = useState(null);
     const [isModalShown, setShown] = useState(false);
+    const [min, setMin] = useState(18);
+    const [max, setMax] = useState(70);
+    const changeMin = (item) => {
+        setMin(item);
+    };
+    const changeMax = (item) => {
+        setMax(item);
+    };
     const toggleModal = (id) => {
         setShown((isShown) => !isShown);
         console.log(id);
@@ -45,7 +53,11 @@ const People = () => {
                 <option value='male'>male</option>
                 <option value='female'>female</option>
             </select>
-           
+            <label>min:</label>
+            <input value={min} onChange={(e) => changeMin(e.target.value)} type="number" id="min" min="18" max="70" />
+            <label>max:</label>
+            <input value={max} onChange={(e) => changeMax(e.target.value)} type="number" id="max" min="18" max="70" />
+          
             <div className="cards" style={{ backgroundColor: (gender === 'male' ? 'rgb(30, 30, 205)' : 'rgb(205, 30, 30)') }}>
                 {users.length > 0 ? res : ''}
                 {isModalShown && selectedUser ? <Modal selectedUser={selectedUser} onClose={toggleModal} /> : null}
