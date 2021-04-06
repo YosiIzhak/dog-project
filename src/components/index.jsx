@@ -7,12 +7,14 @@ import './style.css'
 const People = () => {
     const [users, setUsers] = useState([]);
     const [gender, setGender] = useState('male');
+    const [currentGender, setCurrentGender] = useState('male');
     const [selectedUser, setSelectedUser] = useState(null);
     const [isModalShown, setShown] = useState(false);
     const [filteredUsers, setFilteredUsers] = useState([]);
     const [min, setMin] = useState(18);
     const [max, setMax] = useState(70);
-    let res = [], a = [];
+    let res = [];
+  
     const changeMin = (item) => {
         setMin(item);
     };
@@ -25,7 +27,7 @@ const People = () => {
     };
     const handleGender = (e) => {
         setGender(e.target.value);
-        console.log(gender)
+       // console.log(gender)
     }
 
     useEffect(() => {
@@ -44,11 +46,13 @@ const People = () => {
     }
     const showFilteredRes = (e) => {
         e.preventDefault();
+        setCurrentGender(gender);
+      
         res = users.filter((user) => (user.dob.age >= min) && (user.dob.age <= max) && (user.gender == gender))
        setFilteredUsers([...res])
-       console.log(filteredUsers)
-        console.log(res)
+      
         return res;
+      
     };
 
     return (
@@ -64,15 +68,15 @@ const People = () => {
                 <input value={max} onChange={(e) => changeMax(e.target.value)} type="number" id="max" min="18" max="70" />
                 <button type="submit" >ok!</button>
             </form>
-            <div className="cards" style={{ backgroundColor: (gender === 'male' ? 'rgb(30, 30, 205)' : 'rgb(205, 30, 30)') }}>
+            <div className="cards" style={{ backgroundColor: (currentGender === 'male' ? 'rgb(30, 30, 205)' : 'rgb(205, 30, 30)') }}>
                
                 {filteredUsers.map((x, index) => {
                 
                 return(
+                   
                     <Card key={index} firstname={x.name.first} lastname={x.name.last}
                         picture={x.picture.large} id={x.name.first}
-                        gender={gender} age={x.dob.age}
-                        style={{ backgroundColor: (gender === 'male' ? 'rgb(106, 90, 205)' : 'rgb(238, 130, 238)') }}
+                        gender={currentGender} age={x.dob.age}
                         onClick={() => handleSelecetUser(index)} ></Card>
 
                ) } )

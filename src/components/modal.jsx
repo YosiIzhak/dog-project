@@ -20,7 +20,7 @@ const Modal = ({ onClose, selectedUser }) => {
                 </div>
                 <div className="modal-footer">
                     <button onClick={onClose}>Cancel</button>
-                    <button>Ok</button>
+                    <button>Send</button>
                 </div>
             </div>
         </div>
