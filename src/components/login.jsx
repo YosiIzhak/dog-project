@@ -1,26 +1,28 @@
 import React, { useState } from "react";
 import { Link } from 'react-router-dom';
+import './style.css'
 const Login = () => {
 
     const handleSubmit = (e) => {
-     
+
     };
 
     return (
-
-        <form className='form' onSubmit={handleSubmit}>
-            <label className='formItem'>
-                First Name:
+        <div className='myform'>
+            <form className='form' onSubmit={handleSubmit}>
+                <label className='formItem'>
+                    First Name:
     <input type="text" name="firstName" />
-            </label>
-            <label className='formItem'>
-                Last Name:
+                </label>
+                <label className='formItem'>
+                    Last Name:
     <input type="text" name="LastName" />
-            </label>
-            <Link to="/People">
+                </label>
+                <Link to="/People">
                     <button type="button">submit!</button>
                 </Link>
-        </form>
+            </form>
+        </div>
     );
 }
 export default Login;
