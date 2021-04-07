@@ -5,7 +5,7 @@ const Login = () => {
 
     const handleSubmit = (e) => {
 
-    };
+    }; 
 
     return (
         <div className='myform'>
@@ -19,7 +19,7 @@ const Login = () => {
     <input type="text" name="LastName" />
                 </label>
                 <Link to="/People">
-                    <button type="button">submit!</button>
+                    <button className="submitbtn" type="button">submit!</button>
                 </Link>
             </form>
         </div>

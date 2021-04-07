@@ -1,9 +1,12 @@
 import logo from './logo.svg';
+import React, { useState} from 'react';
 import './App.css';
-import Login from './components/login';
+import Login from './components/login'
 import People from './components/index';
+import Home from './components/home';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 function App() {
+ 
   return (
     <div className="App">
       <Router>
@@ -26,18 +29,9 @@ function App() {
       </Router>
 
 
-      {/*  */}
+    
     </div>
   );
 }
 
 export default App;
-function Home() {
-  return (
-    <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <Link to={`/Form`} className="App-link">start</Link>
-
-    </header>
-  );
-}
