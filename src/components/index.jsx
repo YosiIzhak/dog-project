@@ -35,19 +35,18 @@ const People = () => {
             const response = await axios.get(`https://randomuser.me/api/?results=15&gender=${gender.toLowerCase()}`)
 
             setUsers(response.data.results)
-
         }
         req();
-    }, [gender,min,max]);
+    }, [min, max, gender]);
 
     const handleSelecetUser = (index) => {
         toggleModal(index);
         setSelectedUser(filteredUsers[index])
     }
+    
     const showFilteredRes = (e) => {
         e.preventDefault();
         setCurrentGender(gender);
-      
         res = users.filter((user) => (user.dob.age >= min) && (user.dob.age <= max) && (user.gender == gender))
        setFilteredUsers([...res])
       

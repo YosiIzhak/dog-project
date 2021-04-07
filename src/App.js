@@ -21,8 +21,8 @@ function App() {
             <People />
           </Route>
           <Route path="/">
-          <a href="https://www.google.com/" className="exitLink">exit</a>
-
+          <a href="https://www.google.com/" className="exitLink">Exit</a>
+          <Link to="/" className="homeLink">Home</Link>
           </Route>
 
         </div>
