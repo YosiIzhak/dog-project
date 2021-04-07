@@ -99,6 +99,25 @@
   left: 4vw;
   background-color: aquamarine;
 }
+.homebtn{
+  position: absolute;
+  bottom: 5vh;
+  height: 7vh;
+  width: 10vw;
+  border-radius: 15%;
+  background-color: rgb(224, 19, 1);
+  margin-left: -10vw;
+}
+.homeModal{
+  position: fixed;
+  width: 25vw;
+  top: 15vh;
+  left: 38vw;
+  background-color: darkorchid;
+  padding: 16px;
+  border-radius: 4px;
+  color:wheat;
+}
 
 @media screen and (max-width: 500px) {
   .cards {
