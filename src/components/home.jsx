@@ -8,7 +8,7 @@ const Home = () => {
         setShow((isShown) => !isShown);
     };
     return (
-        <div className='home'>
+        <div className='home' title="home">
             <button className="homebtn" onClick={e => {showModal()}}>About </button>
          
             <Link to="/form">
