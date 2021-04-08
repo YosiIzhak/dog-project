@@ -1,4 +1,4 @@
-import React, { useState,useRef} from 'react';
+import React, { useRef} from 'react';
 import './style.css'
 import { useClickAway } from "./useClickAway";
 const HomeModal = ({ onClose}) => {

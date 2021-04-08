@@ -1,5 +1,4 @@
-import logo from './logo.svg';
-import React, { useState} from 'react';
+import React, { } from 'react';
 import './App.css';
 import Login from './components/login'
 import People from './components/index';
